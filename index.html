@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>GameDev</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Protest+Guerrilla&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              poppins: ["Poppins", "sans-serif"],
+              protest: ['"Protest Guerrilla"', "sans-serif"],
+            },
+            colors: {
+              "custom-red": "#53212B",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="bg-black text-white font-poppins">
+    <!-- Header -->
+    <header class="bg-black py-4">
+      <div class="container mx-auto flex justify-between items-center px-4">
+        <a href="index.php" class="text-white text-2xl font-bold">
+          <img src="./assets/logo-footer.png" class="w-1/2" alt="logo" />
+        </a>
+        <nav class="hidden md:flex space-x-4">
+          <a href="index.html" class="text-white hover:text-gray-300">Home</a>
+          <a href="about.html" class="text-white hover:text-gray-300">About</a>
+          <a href="feedback.html" class="text-white hover:text-gray-300"
+            >Feedbacks</a
+          >
+        </nav>
+        <button class="md:hidden">
+          <svg
+            class="w-6 h-6 text-white"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="text-center py-20">
+      <div class="container mx-auto px-4">
+        <h1 class="text-8xl font-protest mb-4">gamedev</h1>
+        <p class="text-xl mb-8">
+          Discover the Best Free-To-Play Games with Ease!
+        </p>
+        <a
+          href="#Download"
+          class="bg-red-600 text-white px-8 py-3 rounded-full uppercase font-medium hover:bg-red-700 transition duration-300"
+          >let's start!</a
+        >
+      </div>
+    </section>
+
+    <!-- Popular Games Section -->
+    <section class="py-20" id="Download">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-4">most popular games</h2>
+        <p class="text-center mb-12">
+          "Expand your horizons! Dive into new genres and discover exciting
+          adventures beyond your usual games."
+        </p>
+
+        <!-- Carousel -->
+        <div
+          id="carouselExampleAutoplaying"
+          class="relative w-full"
+          data-te-carousel-init
+          data-te-ride="carousel"
+        >
+          <div
+            class="relative w-full overflow-hidden after:clear-both after:block after:content-['']"
+          >
+            <div
+              class="relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+              data-te-carousel-item
+              data-te-carousel-active
+            >
+              <img
+                src="./assets/valorant.jpg"
+                class="block w-full"
+                alt="valorant image"
+              />
+            </div>
+            <div
+              class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+              data-te-carousel-item
+            >
+              <img
+                src="./assets/wz.jpg"
+                class="block w-full"
+                alt="warzone image"
+              />
+            </div>
+            <!-- Add more carousel items here -->
+          </div>
+          <button
+            class="absolute top-0 bottom-0 left-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+            type="button"
+            data-te-target="#carouselExampleAutoplaying"
+            data-te-slide="prev"
+          >
+            <span class="inline-block h-8 w-8">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="h-6 w-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15.75 19.5L8.25 12l7.5-7.5"
+                />
+              </svg>
+            </span>
+            <span
+              class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+              >Previous</span
+            >
+          </button>
+          <button
+            class="absolute top-0 bottom-0 right-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+            type="button"
+            data-te-target="#carouselExampleAutoplaying"
+            data-te-slide="next"
+          >
+            <span class="inline-block h-8 w-8">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="h-6 w-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                />
+              </svg>
+            </span>
+            <span
+              class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+              >Next</span
+            >
+          </button>
+        </div>
+
+        <!-- Game Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+          <!-- Valorant Card -->
+          <div class="bg-custom-red rounded-lg overflow-hidden">
+            <img
+              src="./assets/valorant.jpg"
+              alt="valorant image"
+              class="w-full"
+            />
+            <div class="p-6">
+              <h3 class="text-2xl font-medium text-center mb-4">Valorant</h3>
+              <p class="mb-4">
+                Test your mettle in Riot Games' character-based FPS shooter
+                Valorant.
+              </p>
+              <a
+                href="https://playvalorant.com/en-sg/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-block bg-red-600 text-white px-4 py-2 rounded mb-4 hover:bg-red-700 transition duration-300"
+                >Download</a
+              >
+              <ul class="space-y-2">
+                <li><strong>Genre:</strong> Shooter</li>
+                <li><strong>Platform:</strong> PC (WINDOWS)</li>
+                <li><strong>Release Date:</strong> 2020-06-02</li>
+              </ul>
+              <div class="mt-4">
+                <a
+                  href="https://www.freetogame.com/valorant"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-block bg-red-600 text-white px-4 py-2 rounded text-sm hover:bg-red-700 transition duration-300"
+                  >View Profile</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- League of Legends Card -->
+          <div class="bg-custom-red rounded-lg overflow-hidden">
+            <img src="./assets/lol.webp" alt="LoL image" class="w-full" />
+            <div class="p-6">
+              <h3 class="text-2xl font-medium text-center mb-4">
+                League of Legends
+              </h3>
+              <p class="mb-4">
+                A free-to-play MOBA game, and one of the most played pc game in
+                the world.
+              </p>
+              <a
+                href="https://www.leagueoflegends.com/en-ph/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-block bg-red-600 text-white px-4 py-2 rounded mb-4 hover:bg-red-700 transition duration-300"
+                >Download</a
+              >
+              <ul class="space-y-2">
+                <li><strong>Genre:</strong> MOBA</li>
+                <li><strong>Platform:</strong> PC (WINDOWS)</li>
+                <li><strong>Release Date:</strong> 2009-10-27</li>
+              </ul>
+              <div class="mt-4">
+                <a
+                  href="https://www.freetogame.com/league-of-legends"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-block bg-red-600 text-white px-4 py-2 rounded text-sm hover:bg-red-700 transition duration-300"
+                  >View Profile</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Dota 2 Card -->
+          <div class="bg-custom-red rounded-lg overflow-hidden">
+            <img src="./assets/dota.jpg" alt="dota image" class="w-full" />
+            <div class="p-6">
+              <h3 class="text-2xl font-medium text-center mb-4">Dota 2</h3>
+              <p class="mb-4">
+                A free-to-play MOBA game, and one of the most played pc game in
+                the world.
+              </p>
+              <a
+                href="https://www.dota2.com/home"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-block bg-red-600 text-white px-4 py-2 rounded mb-4 hover:bg-red-700 transition duration-300"
+                >Download</a
+              >
+              <ul class="space-y-2">
+                <li><strong>Genre:</strong> MOBA</li>
+                <li><strong>Platform:</strong> PC (WINDOWS)</li>
+                <li><strong>Release Date:</strong> 2013-07-09</li>
+              </ul>
+              <div class="mt-4">
+                <a
+                  href="https://www.freetogame.com/dota-2"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-block bg-red-600 text-white px-4 py-2 rounded text-sm hover:bg-red-700 transition duration-300"
+                  >View Profile</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recommendations Section -->
+    <section class="bg-gray-900 py-20">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-4">RECOMMENDATIONS</h2>
+        <p class="text-center mb-12">
+          "Step out of your comfort zone! Explore other games for new
+          challenges, unique stories, and endless fun."
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Call of Duty: Warzone Card -->
+          <div class="bg-custom-red rounded-lg overflow-hidden">
+            <img
+              src="./assets/wz.jpg"
+              alt="warzone image"
+              class="w-full mb-4"
+            />
+            <div class="p-6">
+              <h3 class="text-2xl font-medium mb-4">Call of Duty: Warzone</h3>
+              <p class="mb-4">
+                A standalone free-to-play battle royale and modes accessible via
+                Call of Duty: Modern Warfare.
+              </p>
+              <a
+                href="https://www.callofduty.com/warzone"
+                target="_blank"
+                class="inline-block bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700 transition duration-300"
+                >Learn more</a
+              >
+            </div>
+          </div>
+
+          <!-- Deadlock Card -->
+          <div class="bg-custom-red rounded-lg overflow-hidden">
+            <img
+              src="./assets/deadlock.jpg"
+              alt="deadlock image"
+              class="w-full mb-4"
+            />
+            <div class="p-6">
+              <h3 class="text-2xl font-medium mb-4">Deadlock</h3>
+              <p class="mb-4">
+                Deadlock is an upcoming Multiplayer action game developed and
+                published by Valve.
+              </p>
+              <a
+                href="https://store.steampowered.com/app/1422450/Deadlock/"
+                target="_blank"
+                class="inline-block bg-red-600 text-white px-6 py-2 rounded uppercase hover:bg-red-700 transition duration-300"
+                >Learn more</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feedback Form Section -->
+    <section class="py-20">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-4">
+          Send us your feedback
+        </h2>
+        <p class="text-center mb-12">
+          "Your feedback helps us level up! We appreciate your insights as we
+          work to improve your gaming experience."
+        </p>
+
+        <div class="bg-custom-red rounded-lg p-8 max-w-2xl mx-auto">
+          <form action="" method="POST" class="space-y-6">
+            <div>
+              <label for="name" class="block mb-2">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                class="w-full px-4 py-2 rounded bg-gray-700 text-white"
+              />
+            </div>
+            <div>
+              <label for="email" class="block mb-2">Email</label>
+              <input type="email" id="" />
+            </div>
+          </form>
+          <!-- Footer -->
+          <footer class="mt-32 bg-black text-white">
+            <div class="container mx-auto px-4 py-8">
+              <div class="max-w-md mx-auto">
+                <h5 class="text-xl font-semibold mb-4">useful links</h5>
+                <div class="space-y-4">
+                  <div class="flex items-center">
+                    <img
+                      src="https://cdn.prod.website-files.com/66fa170629dfadef4aedcb55/66fa170629dfadef4aedcbf8_social-06-white.svg"
+                      width="20"
+                      alt=""
+                      class="mr-2"
+                    />
+                    <a
+                      href="#"
+                      class="hover:text-gray-300 transition duration-300"
+                      >Google</a
+                    >
+                  </div>
+                  <div class="flex items-center">
+                    <img
+                      src="https://cdn.prod.website-files.com/66fa170629dfadef4aedcb55/66fa170629dfadef4aedcbd6_social-02-white.svg"
+                      width="20"
+                      alt=""
+                      class="mr-2"
+                    />
+                    <a
+                      href="#"
+                      class="hover:text-gray-300 transition duration-300"
+                      >Facebook</a
+                    >
+                  </div>
+                  <div class="flex items-center">
+                    <img
+                      src="https://cdn.prod.website-files.com/66fa170629dfadef4aedcb55/66fa53266216b28c635e7174_logo-footer.png"
+                      width="20"
+                      alt=""
+                      class="mr-2"
+                    />
+                    <a
+                      href="#"
+                      class="hover:text-gray-300 transition duration-300"
+                      >API</a
+                    >
+                  </div>
+                  <div class="flex items-center">
+                    <img
+                      src="https://cdn.prod.website-files.com/66fa170629dfadef4aedcb55/66fa170629dfadef4aedcbd7_social-33-white.svg"
+                      width="20"
+                      alt=""
+                      class="mr-2"
+                    />
+                    <a
+                      href="#"
+                      class="hover:text-gray-300 transition duration-300"
+                      >Github</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="bg-transparent py-4">
+              <div class="container mx-auto px-4">
+                <div class="text-center text-gray-400 italic font-light">
+                  © 2024 Nieves & Tiotangco. All Rights Reserved.
+                </div>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </section>
+    <script src="/js/animation.js"></script>
+  </body>
+</html>
